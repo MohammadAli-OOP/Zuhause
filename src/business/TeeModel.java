@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class TeeModel {
 	private Tee tee;
@@ -24,23 +25,18 @@ public class TeeModel {
 				= new BufferedWriter(new FileWriter("TeeAusgabe.csv", true));
 			aus.write(tee.gibTeeZurueck(';'));
 			aus.close();
-
-		
-		
 	}
 	
 	public void leseAusDatei(String typ) throws IOException{
-
       		if("csv".equals(typ)){
-      			BufferedReader ein = new BufferedReader(new FileReader("Tee.csv"));
+      			BufferedReader ein = new BufferedReader(new FileReader("TeeAusgabe.csv"));
       			String[] zeile = ein.readLine().split(";");
       			this.tee = new Tee(zeile[0], 
       				Float.parseFloat(zeile[1]), 
       				Float.parseFloat(zeile[2]), 
-      				zeile[3], zeile[4].split("_"));
+      				zeile[3], zeile[4].split(";"));
+      			
       				ein.close();
-     
-      		
-      		}		
+      		}
       }		
 }

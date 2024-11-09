@@ -4,12 +4,12 @@ public class Tee {
 	
 	// artikelnummer des Teees
     private String artikelnummer;
-    // Oeffnungszeiten
+    // Infos
     private float bezeichnung;
     private float kategorie;
-    // Strasse und Hausnummer des Teees
+    // KOffin des Teees
     private String koffin;
-    // krauter des Teees
+    // krauter des Tees
     private String[] krauter;
 
     public Tee(String artikelnummer, float bezeichnung, float kategorie,
@@ -74,7 +74,7 @@ public class Tee {
   		return this.getArtikelnummer() + trenner 
   			+ this.getBezeichnung() + trenner
   		    + this.getKategorie() + trenner
-  		    + this.getKoffin() + trenner + "\n"
+  		    + this.getKoffin() + trenner 
   		    + this.getkrauterAlsString(trenner) + "\n";
   	}
 }

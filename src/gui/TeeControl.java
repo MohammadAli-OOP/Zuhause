@@ -45,7 +45,8 @@ public class TeeControl {
 		}
 		catch(Exception exc){
 			this.teeView.zeigeFehlermeldungsfensterAn(
-				"Unbekannter Fehler beim Lesen!");
+				"Unbekannter Fehler beim Lesen!"+ exc.getMessage());
+	        //exc.printStackTrace();  // Detaillierte Ausgabe des Fehlers in der Konsole
 		}
 	}
 	public void schreibeTeeInCsvDatei() {
