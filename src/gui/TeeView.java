@@ -139,7 +139,7 @@ public class TeeView {
 	    btnAnzeige.setOnAction(new EventHandler<ActionEvent>() {
 	    	@Override
 	        public void handle(ActionEvent e) {
-	            zeigeBuergeraemterAn();
+	            zeigeTeeAn();
 	        } 
    	    });
 	    mnItmCsvImport.setOnAction(new EventHandler<ActionEvent>() {
@@ -163,7 +163,7 @@ public class TeeView {
     }
    
    
-   private void zeigeBuergeraemterAn(){
+   private void zeigeTeeAn(){
    	if(this.teeModel.getTee() != null){
    		txtAnzeige.setText(
    			this.teeModel.getTee().gibTeeZurueck(' '));
