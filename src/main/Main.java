@@ -1,5 +1,5 @@
 package main;
-
+//--module-path C:\Users\mehma\Desktop\javafx-sdk-22.0.1\lib --add-modules=javafx.controls,javafx.fxml
 import gui.BuergeraemterAnwendersystem;
 import gui.TeeControl;
 import javafx.application.Application;
